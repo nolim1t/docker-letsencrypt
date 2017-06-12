@@ -11,8 +11,7 @@ docker build .
 ## Running
 
 ```bash
-# where 02f4ea527d80 is the container you built
-docker run -it 02f4ea527d80 certbot certonly --manual
+docker run -it -v config:/etc/letsencypt --name letsencrypt nolim1t/letsencrypt certbot certonly --manual
 ```
 
 ## TODO
