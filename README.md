@@ -5,13 +5,25 @@ Using Docker
 ## Installation
 
 ```bash
-docker build .
+./build.sh
 ```
 
-## Running
+### Running
 
 ```bash
-docker run -it -v config:/etc/letsencypt --name letsencrypt nolim1t/letsencrypt certbot certonly --manual
+./run.sh
+```
+
+### Stop/Cleanup
+
+```bash
+./stop.sh
+```
+
+### Copy the certificate in case it doesn't save
+
+```bash
+docker cp CONTAINER:/etc/letsencrypt/archive/domain .
 ```
 
 ## TODO
